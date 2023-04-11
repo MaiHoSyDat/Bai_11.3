@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="start()">Chơi</button>
+
+</body>
+</html>
+<script>
+    function start() {
+        let people11 = prompt("nhập số trong khoảng từ:");
+        let people12 = prompt("đến");
+        let people2 = prompt("Mời bạn đoán");
+        let num = 0;
+        for (; people11 > people2 || people2 > people12;) {
+            num++
+            if (num === 3) {
+                alert("Bạn đã trả lời sai rồi!");
+                break;
+            }
+            people2 = prompt("Cho phép bạn nhập lại");
+        }
+        if (num < 3) {
+            alert("Xin chúc mừng bạn đã đoán đúng")
+        }
+    }
+</script>
